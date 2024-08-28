@@ -3,8 +3,15 @@ package helper
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+func TestHelloWorldAssert(t *testing.T) {
+	result := HelloWorld("Ferdi")
+	assert.Equal(t, "Hello Ferdi", result, "Result must be 'Hello Ferdi'")
+	fmt.Println("TestHelloWorld with Assert Done")
+}
 func TestHelloWorld(t *testing.T) {
 	result := HelloWorld("Ferdi")
 	if result != "Hello Ferdi" {
